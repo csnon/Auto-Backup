@@ -1,5 +1,6 @@
 # Auto-Backup to Anonfiles.com
 Simple Auto Backup to anonfiles and send links to discord
+**Download link** : https://github.com/csnon/Auto-Backup/releases/tag/v1
 
 ## 📸 Photo
 ![Screenshot](https://cdn.discordapp.com/attachments/950210834120998912/953581281378177034/unknown.png)
