@@ -275,7 +275,7 @@ namespace Non_Backup
             else
             {
                 button1.Enabled = false;
-                int BackupTimer = trackBar1.Value * 60000;
+                int BackupTimer = trackBar1.Value * 3600000;
                 timer1.Interval = BackupTimer;
                 timer1.Start();
                 label7.Text = "Auto Backup = ON";
