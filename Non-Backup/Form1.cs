@@ -313,42 +313,34 @@ namespace Non_Backup
             string zipfile3 = desktop + @"\\file3.zip";
             if (File.Exists(zipfile1))
             {
+                String Link1 = CreateDownloadLink(zipfile1);
+                Send("**File 1 : " + Link1, "Non-Backup | Auto backup", textBox1.Text);
                 File.Delete(zipfile1);
             }
             if (File.Exists(zipfile2))
             {
+                String Link2 = CreateDownloadLink(zipfile2);
+                Send("**File 2 : " + Link2, "Non-Backup | Auto backup", textBox1.Text);
                 File.Delete(zipfile2);
             }
             if (File.Exists(zipfile3))
             {
-                File.Delete(zipfile3);
+               
+                String Link3 = CreateDownloadLink(zipfile3);
+                Send("**File 3 : " + Link3, "Non-Backup | Auto backup", textBox1.Text);
+                 File.Delete(zipfile3);
             }
             if (!string.IsNullOrWhiteSpace(textBox2.Text))
             {
                 ZipFile.CreateFromDirectory(file1, desktop + @"\\file1.zip");
-                if (File.Exists(zipfile1))
-                {
-                    String Link1 = CreateDownloadLink(zipfile1);
-                    Send("**File 1 : " + Link1, "Non-Backup | Auto backup", textBox1.Text);
-                }
             }
             if (!string.IsNullOrWhiteSpace(textBox3.Text))
             {
                 ZipFile.CreateFromDirectory(file2, desktop + @"\\file2.zip");
-                if (File.Exists(zipfile2))
-                {
-                    String Link2 = CreateDownloadLink(zipfile2);
-                    Send("**File 2 : " + Link2, "Non-Backup | Auto backup", textBox1.Text);
-                }
             }
             if (!string.IsNullOrWhiteSpace(textBox4.Text))
             {
                 ZipFile.CreateFromDirectory(file3, desktop + @"\\file3.zip");
-                if (File.Exists(zipfile3))
-                {
-                    String Link3 = CreateDownloadLink(zipfile3);
-                    Send("**File 3 : " + Link3, "Non-Backup | Auto backup", textBox1.Text);
-                }
             }
         }
 
